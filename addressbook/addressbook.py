@@ -56,9 +56,7 @@ class AddressBook(object):
         group = self._groups.getGroup(groupName)
         if group:
             peopleKeys = self._members.findPeople(group)
-            people = []
-            for person in peopleKeys:
-                people.append(self._people.findPerson(person))
+            people = [ self._people.findPerson(person) for person in peopleKeys ]
             return people
         return None
 

@@ -24,7 +24,7 @@ class Node(object):
         values = self.values
         for node in self.nodes.values():
             values += node.getValues()
-        return values;
+        return values
 
 class IndexByEmail(object):
 
